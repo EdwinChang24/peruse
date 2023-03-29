@@ -3,6 +3,11 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("io.gitlab.arturbosch.detekt") version "1.22.0"
+}
+
+detekt {
+    config = files(rootProject.file("detekt.yml"))
 }
 
 android {
